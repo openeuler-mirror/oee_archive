@@ -1,22 +1,14 @@
 # oee_archive
 
 #### Description
-store some package that not be collected by src-openeuler for openEuler Embedded
-
-#### Software Architecture
-Software architecture description
-
-#### Installation
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+The code repo is to be stored upstream packages that not include by openeuler
 
 #### Instructions
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  when we add upstream package, we should comply standards as fold/compress
+2.  when we get upstream package, we should modify SRC_URI param in yocto-meta-openeuler's bb or bbappend file, get line that contains compress and alter it to start with file, e.g:
+    file://oee_archive/${BPN}/xxx.tar.gz
+3.  every time you alter the oee_archive repo, you should modify openEuler Embedded's base line
 
 #### Contribution
 

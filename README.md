@@ -1,23 +1,14 @@
 # oee_archive
 
 #### 介绍
-store some package that not be collected by src-openeuler for openEuler Embedded
-
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+该仓承担openEuler Embedded中未被openEuler收录的源码包存放地址
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  录入时存放目录结构为包名/压缩包
+2.  获取时在yocto-meta-openeuler源码的bb文件或bbappend文件中修改SRC_URI变量，对于压缩包相关的设定以file字段开头，参考以下范例：
+    file://oee_archive/${BPN}/xxx.tar.gz
+3.  每一次的该仓修改需要同步修改openEuler Embedded的基线文件
 
 #### 参与贡献
 
